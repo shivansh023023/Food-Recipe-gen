@@ -1,4 +1,4 @@
-You can access the website at - ttps://statuesque-dodol-a8198c.netlify.app
+You can access the website at - https://statuesque-dodol-a8198c.netlify.app
 # FoodRecipe - Your Culinary Companion
 
 A modern, responsive web application that helps you discover and save your favorite recipes. Built with React and powered by the Forkify API, this application provides an intuitive interface for searching recipes, viewing detailed instructions, and managing your favorite culinary discoveries.
