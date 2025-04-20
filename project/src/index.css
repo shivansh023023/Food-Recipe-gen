@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f7f3;
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ddd6c7' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@layer components {
+  .recipe-card {
+    @apply flex flex-col overflow-hidden p-0 bg-white shadow-lg border border-gray-100 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .btn {
+    @apply text-sm py-3 px-8 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md transition-all duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-orange-600 text-white hover:bg-orange-700 active:bg-orange-800;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent border border-orange-600 text-orange-600 hover:bg-orange-50;
+  }
+  
+  .input-search {
+    @apply bg-white p-3 px-8 rounded-full outline-none lg:w-96 shadow-lg focus:ring-2 focus:ring-orange-300 transition-all duration-200;
+  }
+  
+  .nav-link {
+    @apply text-gray-700 hover:text-orange-600 transition-colors duration-200 font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full;
+  }
+  
+  .nav-link.active {
+    @apply text-orange-600 after:w-full;
+  }
+  
+  .section {
+    @apply py-8 container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .card-image-container {
+    @apply h-52 overflow-hidden relative;
+  }
+  
+  .card-image {
+    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-110;
+  }
+  
+  .card-content {
+    @apply p-6 flex flex-col gap-2;
+  }
+  
+  .card-publisher {
+    @apply text-sm text-green-700 font-medium;
+  }
+  
+  .card-title {
+    @apply font-bold text-xl truncate text-gray-800;
+  }
+  
+  .empty-state {
+    @apply py-16 px-4 text-center max-w-lg mx-auto;
+  }
+  
+  .empty-state-title {
+    @apply text-2xl sm:text-3xl md:text-4xl text-gray-800 font-bold mb-4;
+  }
+  
+  .empty-state-text {
+    @apply text-gray-600 mb-8;
+  }
+  
+  .loading-state {
+    @apply flex items-center justify-center min-h-[50vh];
+  }
+  
+  .ingredient-item {
+    @apply flex items-center gap-2 py-2 border-b border-gray-100 last:border-0;
+  }
+  
+  .ingredient-marker {
+    @apply w-2 h-2 rounded-full bg-orange-500 flex-shrink-0;
+  }
+  
+  .ingredient-text {
+    @apply text-gray-700;
+  }
+  
+  .detail-image {
+    @apply w-full h-full object-cover rounded-xl transition-transform duration-700;
+  }
+}
